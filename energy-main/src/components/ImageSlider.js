@@ -1,0 +1,74 @@
+import React, { useRef, useEffect } from "react";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import video1 from "../assets/video1.mp4";
+import video2 from "../assets/video2.mp4";
+
+const ImageSlider = () => {
+  const videos = [
+    { id: 1, src: video1, alt: "Video 1" },
+    { id: 2, src: video2, alt: "Video 2" },
+  ];
+
+  const videoRefs = useRef([]);
+
+  // Set playback speed on mount
+  useEffect(() => {
+    videoRefs.current.forEach((video) => {
+      if (video) video.playbackRate = 1.5; // Adjust speed here (1.5x)
+    });
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    arrows: false,
+    pauseOnHover: true,
+  };
+
+  return (
+    <div className="relative w-full h-[80vh] bg-black overflow-hidden">
+      <Slider {...settings}>
+        {videos.map((video, index) => (
+          <div key={video.id} className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+            {/* Background Video */}
+            <video
+              ref={(el) => (videoRefs.current[index] = el)}
+              src={video.src}
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+
+            {/* Marquee Text at Bottom */}
+            <div className="absolute bottom-6 w-full overflow-hidden z-20">
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{
+                  duration: 15,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="text-white text-base md:text-5xl font-bold whitespace-nowrap bg-black/60 px-6 py-2 w-max"
+              >
+               Celebrating 8 Years Since Inception
+              </motion.div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default ImageSlider;
