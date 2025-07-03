@@ -1,0 +1,22 @@
+/* index.css */
+
+/* ✅ Correct Google Font import (NO <link>) */
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap');
+
+/* Optional: Leaflet styles if you're using them */
+@import "leaflet/dist/leaflet.css";
+
+/* Tailwind base setup */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles (optional) */
+.logo-img {
+  width: 150px;
+  height: auto;
+}
+
+header {
+  background: #ffffff;
+}

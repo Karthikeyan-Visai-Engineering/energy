@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Visai Energy</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Visai Energy specializes in structural and mechanical engineering solutions, including HVAC, plumbing, fire protection, and more, ensuring safety, sustainability, and efficiency." />
+    <meta name="keywords" content="Visai Energy, HVAC Solutions, Plumbing Systems, Fire Protection, Structural Engineering, Mechanical Engineering, Sustainable Engineering, Building Infrastructure, Safety" />
+    <meta name="author" content="Visai Energy" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Visai Energy - Innovative Engineering Solutions" />
+    <meta property="og:description" content="Visai Energy delivers cutting-edge building and infrastructure solutions in HVAC, plumbing, fire protection, and structural engineering." />
+    <meta property="og:image" content="https://www.visaienergy.com/logo.png" />
+    <meta property="og:url" content="https://www.visaienergy.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Visai Energy" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Anton&family=Edu+SA+Hand:wght@400..700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Extend Tailwind to support custom fonts -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              anton: ['Anton', 'sans-serif'],
+              hand: ['"Edu SA Hand"', 'cursive'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- External CSS (your own styles if any) -->
+    <link rel="stylesheet" href="path/to/your/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Manifest and Apple Config -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </head>
+
+  <body class="bg-gray-100 font-inter">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="path/to/your/scripts.js"></script>
+  </body>
+</html>
