@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-  FaInstagram,
   FaLinkedin,
   FaFacebook,
 } from "react-icons/fa";

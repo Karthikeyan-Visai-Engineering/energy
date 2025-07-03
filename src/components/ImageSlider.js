@@ -3,8 +3,9 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import bg2 from "../assets/bg2.jpg";
+
 import bg from "../assets/bg.png";
+import bg2 from "../assets/bg2.jpg";
 import bg3 from "../assets/bg3.jpg";
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
@@ -14,8 +15,8 @@ const ImageSlider = () => {
     { id: 1, type: "image", src: bg, alt: "Background Image" },
     { id: 2, type: "video", src: video1, alt: "Video 1" },
     { id: 3, type: "video", src: video2, alt: "Video 2" },
-    { id: 4, type: "image", src: bg2, alt: "Background Image" },
-    { id: 5, type: "image", src: bg3, alt: "Background Image" },
+    { id: 4, type: "image", src: bg2, alt: "Background Image 2" },
+    { id: 5, type: "image", src: bg3, alt: "Background Image 3" },
   ];
 
   const videoRefs = useRef([]);
@@ -31,14 +32,16 @@ const ImageSlider = () => {
 
   // Observe slider visibility
   useEffect(() => {
+    const currentRef = containerRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.3 }
     );
 
-    if (containerRef.current) observer.observe(containerRef.current);
+    if (currentRef) observer.observe(currentRef);
     return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 

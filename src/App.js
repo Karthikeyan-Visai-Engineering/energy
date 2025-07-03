@@ -14,7 +14,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import About1 from "./pages/About1";
 import Contact from "./pages/Contact";
-import Career from "./pages/Career";
+
 import Association from "./pages/Association";
 import Industries from "./pages/Industries";
 import Engineering from "./pages/Engineering";
