@@ -24,8 +24,7 @@ const Processing = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#1e325c] via-[#4c6b9e] to-[#ead57b] drop-shadow-lg tracking-tight underline decoration-[#ead57b] underline-offset-8"
-      >
+        className="text-[#4c6b9e] font-semibold">
         Electrical Engineering
       </motion.h2>
 

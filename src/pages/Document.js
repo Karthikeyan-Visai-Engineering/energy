@@ -34,7 +34,7 @@ const DocumentControl = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-6xl font-extrabold text-center mb-16 bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 text-transparent bg-clip-text drop-shadow-lg underline decoration-[#ead57b] underline-offset-8"
+        className="text-[#4c6b9e] font-semibold"
       >
         Document Control & Management
       </motion.h2>

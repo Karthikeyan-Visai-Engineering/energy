@@ -2,26 +2,31 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import debounce from "lodash.debounce";
 import video from "../assets/welcome.mp4";
+import industries from "../assets/power-plant.png";
+import engineering from "../assets/engine.png";
+import sustainability from "../assets/sustainability.png";
+import software from "../assets/design-software.png";
+import quality from "../assets/assurance.png";
 
 const steps = [
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    icon: engineering,
     title: "Engineering Services",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    icon: software,
     title: "Software Tools",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/envoy/envoy-original.svg",
+    icon: sustainability,
     title: "Sustainability",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    icon: industries,
     title: "Industries",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    icon: quality,
     title: "Quality",
   },
 ];

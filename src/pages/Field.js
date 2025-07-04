@@ -34,7 +34,7 @@ const AsBuilt = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-500 to-pink-500 drop-shadow-lg underline underline-offset-8 decoration-[#ead57b]"
+        className="text-[#4c6b9e] font-semibold"
       >
         As-Built and Field Services
       </motion.h2>

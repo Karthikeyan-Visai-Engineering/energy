@@ -68,7 +68,7 @@ const IndustriesWeServe = () => {
           </p>
 
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl mx-auto lg:mx-0"
             variants={sectionVariants}
           >
             {industries.map((item, i) => (
