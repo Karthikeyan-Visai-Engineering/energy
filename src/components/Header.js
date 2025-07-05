@@ -35,7 +35,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-300 shadow-sm">
+      {/* Fixed Header */}
+      <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <Link to="/">
             <img src={logo} alt="Logo" className="h-16 w-auto" />
@@ -69,7 +70,7 @@ const Header = () => {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        className="absolute top-full left-0 mt-4 w-80 bg-white/90 backdrop-blur rounded-xl shadow-lg ring-1 ring-gray-200 px-4 py-4 z-50"
+                        className="absolute top-full left-0 mt-4 w-80 bg-white/90 backdrop-blur-md rounded-xl shadow-lg ring-1 ring-gray-200 px-4 py-4 z-50"
                       >
                         {item.subItems.map((sub) => (
                           <li key={sub.to} className="py-1">
@@ -90,7 +91,10 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-3xl text-[#1e325c]" onClick={() => setMenuOpen(true)}>
+          <button
+            className="md:hidden text-3xl text-[#1e325c]"
+            onClick={() => setMenuOpen(true)}
+          >
             <FaBars />
           </button>
         </div>
@@ -117,7 +121,11 @@ const Header = () => {
               {navItems.map((item) =>
                 !item.subItems ? (
                   <li key={item.name}>
-                    <Link to={item.to} onClick={() => setMenuOpen(false)} className="hover:text-yellow-600">
+                    <Link
+                      to={item.to}
+                      onClick={() => setMenuOpen(false)}
+                      className="hover:text-yellow-600"
+                    >
                       {item.name}
                     </Link>
                   </li>
