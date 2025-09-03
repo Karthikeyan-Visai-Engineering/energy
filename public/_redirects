@@ -1,0 +1,8 @@
+# Redirect all www traffic to non-www
+https://www.visaienergy.com/* https://visaienergy.com/:s 301!
+http://www.visaienergy.com/* https://visaienergy.com/:s 301!
+http://visaienergy.com/*     https://visaienergy.com/:s 301!
+
+# Optional: redirect everything to index.html if SPA
+/*    /index.html   200
+
