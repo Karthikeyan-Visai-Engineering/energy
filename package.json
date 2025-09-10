@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@azure/identity": "^4.10.2",
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/montserrat": "^5.2.5",
     "@fontsource/poppins": "^5.2.5",
     "@material-tailwind/react": "^2.1.10",
