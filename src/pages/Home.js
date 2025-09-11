@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import debounce from "lodash.debounce";
-import { Helmet } from "react-helmet"; // ✅ Import Helmet for SEO
+import React from "react";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet"; // ✅ SEO
 import img from "../assets/welcome.jpg";
 import industries from "../assets/power-plant.webp";
 import engineering from "../assets/engine.webp";
@@ -22,24 +21,6 @@ const centerX = 270;
 const centerY = 270;
 
 const WebsiteDiagram = () => {
-  const welcomeControls = useAnimation();
-
-  useEffect(() => {
-    welcomeControls.set({ opacity: 0, x: -100 });
-    const handleScroll = debounce(() => {
-      welcomeControls.start({
-        opacity: 1,
-        x: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
-      });
-    }, 100);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      handleScroll.cancel();
-    };
-  }, [welcomeControls]);
-
   return (
     <section className="relative bg-white text-[#1E3A8A] overflow-hidden py-24 font-poppins">
       {/* ✅ SEO Meta Tags */}
@@ -55,36 +36,49 @@ const WebsiteDiagram = () => {
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Visai Energy – Engineering Design and Services" />
-        <meta property="og:description" content="Explore Visai Energy's innovative approach to engineering, sustainability, and software tools across multiple industries." />
+        <meta
+          property="og:description"
+          content="Explore Visai Energy's innovative approach to engineering, sustainability, and software tools across multiple industries."
+        />
         <meta property="og:url" content="https://www.visaienergy.com" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.visaienergy.com/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Visai Energy – Engineering Expertise" />
-        <meta name="twitter:description" content="We deliver scalable, safe, and innovative engineering services across energy sectors." />
+        <meta
+          name="twitter:description"
+          content="We deliver scalable, safe, and innovative engineering services across energy sectors."
+        />
         <meta name="twitter:image" content="https://www.visaienergy.com/logo.png" />
       </Helmet>
 
-      {/* Video and Text */}
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#4C6B9E]/10 to-transparent pointer-events-none" />
+
+      {/* Content Section */}
       <div className="relative z-10 max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 px-6">
+        {/* Circle Image */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[1px] border-[#1E3A8A] shadow-md"
         >
           <img
             src={img}
+            alt="Visai Energy welcome"
             className="w-full h-full object-cover"
           />
         </motion.div>
 
+        {/* Text Content */}
         <motion.div
           className="max-w-xl text-center lg:text-left"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <motion.div
             className="inline-block relative mb-6"
@@ -106,8 +100,8 @@ const WebsiteDiagram = () => {
           </motion.div>
 
           <p className="text-lg md:text-xl text-[#334155] mb-6 leading-relaxed font-medium">
-            <strong>Visai Energy</strong> is a forward-thinking engineering company
-            providing design and detailed engineering services across Oil & Gas,
+            <strong>Visai Energy</strong> is a forward-thinking engineering company
+            providing design and detailed engineering services across Oil & Gas,
             Petrochemicals, Power, and Mining sectors.
           </p>
 
@@ -158,6 +152,7 @@ const WebsiteDiagram = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <span className="text-xl md:text-2xl font-bold text-[#1E3A8A] text-center leading-tight">
             Visai<br />Energy
@@ -178,6 +173,7 @@ const WebsiteDiagram = () => {
               initial={{ opacity: 0, scale: 0.6 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
+              viewport={{ once: true }}
             >
               <img
                 src={step.icon}
