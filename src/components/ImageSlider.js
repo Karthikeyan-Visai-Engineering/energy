@@ -5,19 +5,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import bg   from "../assets/bg.webp";
-import bg2  from "../assets/bg2.webp";
-import bg3  from "../assets/bg3.webp";
 import vid1 from "../assets/video1.mp4"; // add ?url if using Vite
-import vid2 from "../assets/video2.mp4";
+import bg4 from "../assets/welcome-1.png";
+import bg5 from "../assets/welcome-2.png";
+import bg6 from "../assets/contact_bg.jpg";
 
 const media = [
   
   { id: 1, type: "video", src: vid1, alt: "Video 1" },
-  { id: 2, type: "video", src: vid2, alt: "Video 2" },
-  { id: 3, type: "image", src: bg,  alt: "Background 1" },
-  { id: 4, type: "image", src: bg2, alt: "Background 2" },
-  { id: 5, type: "image", src: bg3, alt: "Background 3" },
-];
+  { id: 2, type: "image", src: bg,  alt: "Background 1" },
+  { id: 3, type: "image", src: bg4, alt: "Background 4" },
+  { id: 4, type: "image", src: bg5, alt: "Background 5" },
+  { id: 5, type: "image", src: bg6, alt: "Background 5" },];
+
 
 function ImageSlider() {
   const videoRefs = useRef([]);
@@ -39,7 +39,7 @@ function ImageSlider() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: true,
@@ -74,18 +74,6 @@ function ImageSlider() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               )}
-
-              {/* marquee text */}
-              <div className="absolute bottom-6 w-full overflow-hidden z-20">
-                <motion.div
-                  initial={{ x: "-100%" }}
-                  animate={{ x: "100%" }}
-                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                  className="text-white text-base md:text-5xl font-bold whitespace-nowrap bg-black/60 px-6 py-2 w-max"
-                >
-                  Celebrating 8 Years Since Inception
-                </motion.div>
-              </div>
             </div>
           </div>
         ))}

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import debounce from "lodash.debounce";
 import { Helmet } from "react-helmet"; // ✅ Import Helmet for SEO
-import video from "../assets/welcome.mp4";
+import img from "../assets/welcome.jpg";
 import industries from "../assets/power-plant.webp";
 import engineering from "../assets/engine.webp";
 import sustainability from "../assets/sustainability.webp";
@@ -72,14 +72,10 @@ const WebsiteDiagram = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[10px] border-[#1E3A8A] shadow-xl"
+          className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[1px] border-[#1E3A8A] shadow-md"
         >
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src={img}
             className="w-full h-full object-cover"
           />
         </motion.div>

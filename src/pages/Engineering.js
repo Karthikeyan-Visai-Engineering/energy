@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -13,20 +13,31 @@ import document1 from "../assets/document.webp";
 import field1 from "../assets/field.webp";
 import telecom1 from "../assets/communication.webp";
 
-// LazyImage Component with native lazy loading and fallback
-const LazyImage = ({ src, alt, className }) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={`${className} transition-opacity duration-700 ease-in-out`}
-      loading="lazy"
-      decoding="async"
-    />
-  );
-};
+// Simple Image Component
+const SimpleImage = ({ src, alt }) => (
+  <img
+    src={src}
+    alt={alt}
+    style={{
+      width: "100%",
+      height: "200px",
+      objectFit: "cover",
+      borderTopLeftRadius: "4px",
+      borderTopRightRadius: "4px",
+    }}
+    loading="lazy"
+  />
+);
 
 const Engineering = () => {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowTopBtn(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const services = [
@@ -42,7 +53,14 @@ const Engineering = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-white via-blue-50 to-blue-100 py-24 font-poppins scroll-smooth">
+    <section
+      style={{
+        fontFamily: "Poppins, sans-serif",
+        backgroundColor: "#f9fafc",
+        padding: "4rem 1rem",
+        scrollBehavior: "smooth",
+      }}
+    >
       {/* SEO */}
       <Helmet>
         <title>Engineering Services – Visai Energy</title>
@@ -53,39 +71,78 @@ const Engineering = () => {
       </Helmet>
 
       {/* Heading */}
-      <div className="text-center mb-16 px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-[#003366] mb-4 tracking-tight">
+      <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <h2 style={{ fontSize: "2.5rem", fontWeight: "700", color: "#003366", marginBottom: "0.5rem" }}>
           Design & Detailed Engineering
         </h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+        <p style={{ fontSize: "1rem", color: "#555", maxWidth: "700px", margin: "0 auto", lineHeight: "1.5" }}>
           Explore our comprehensive suite of engineering services tailored for excellence in design and execution.
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 max-w-7xl mx-auto">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "2rem",
+          maxWidth: "1200px",
+          margin: "0 auto",
+        }}
+      >
         {services.map((service) => (
           <div
             key={service.title}
-            className="relative group rounded-xl overflow-hidden border border-blue-100 shadow-lg hover:shadow-2xl transition-all duration-300 bg-white will-change-transform"
+            style={{
+              backgroundColor: "#fff",
+              borderRadius: "4px",
+              overflow: "hidden",
+            }}
           >
-            <LazyImage
-              src={service.image}
-              alt={service.title}
-              className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end">
+            <SimpleImage src={service.image} alt={service.title} />
+            <div style={{ padding: "1rem" }}>
               <Link
                 to={service.to}
                 onClick={scrollToTop}
-                className="text-white text-lg font-semibold underline hover:text-yellow-300 transition-colors"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  fontSize: "1rem",
+                  fontWeight: "600",
+                  color: "#003366",
+                  textDecoration: "none",
+                  padding: "0.5rem 0",
+                }}
               >
-                › {service.title}
+                <span>{service.title}</span>
+                <span style={{ fontSize: "1.1rem" }}>→</span>
               </Link>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Back to Top Button */}
+      {showTopBtn && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: "fixed",
+            bottom: "40px",
+            right: "40px",
+            padding: "0.5rem 0.75rem",
+            fontSize: "1rem",
+            backgroundColor: "#003366",
+            color: "#fff",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+        >
+          ↑ Top
+        </button>
+      )}
     </section>
   );
 };
