@@ -4,14 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import bg   from "../assets/bg.webp";
-import vid1 from "../assets/video1.mp4"; // add ?url if using Vite
+import vid1 from "../assets/Welcome_1.png"; // add ?url if using Vite
 import bg4 from "../assets/welcome-1.png";
 import bg5 from "../assets/welcome-2.png";
 import bg6 from "../assets/contact_bg.jpg";
 
 const media = [
   
-  { id: 1, type: "video", src: vid1, alt: "Video 1" },
+  { id: 1, type: "image", src: vid1, alt: "Video 1" },
   { id: 2, type: "image", src: bg,  alt: "Background 1" },
   { id: 3, type: "image", src: bg4, alt: "Background 4" },
   { id: 4, type: "image", src: bg5, alt: "Background 5" },
