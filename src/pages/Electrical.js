@@ -12,7 +12,7 @@ const cardVariants = {
 const LazyImage = ({ src, alt, className }) => {
   const imgRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
-
+   
   useEffect(() => {
     // Use native loading if supported
     if ("loading" in HTMLImageElement.prototype) {
