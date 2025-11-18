@@ -61,7 +61,7 @@ const Piping = () => (
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="text-[#4c6b9e] font-semibold"
+      className="text-[#4c6b9e] font-semibold text-3xl md:text-5xl mb-8"
     >
       Piping Design & Engineering
     </motion.h2>

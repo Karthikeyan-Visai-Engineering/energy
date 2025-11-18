@@ -33,7 +33,7 @@ import Document from "./pages/Document";
 
 const App = () => {
   return (
-    <div className="font-['Poppins','Urbanist','sans-serif'] bg-[#f9fafb] text-[#1e325c]">
+    <>
       <ScrollToTop />
       <Header />
 
@@ -80,7 +80,7 @@ const App = () => {
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

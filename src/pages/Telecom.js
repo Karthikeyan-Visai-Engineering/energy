@@ -63,7 +63,7 @@ const Telecom = () => (
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#60a5fa] underline decoration-[#facc15] underline-offset-8"
+      className="text-[#4c6b9e] font-semibold text-3xl md:text-5xl mb-8"
     >
       Telecom Engineering
     </motion.h2>

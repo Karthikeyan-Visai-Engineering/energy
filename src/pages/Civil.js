@@ -70,7 +70,7 @@ const Civil = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-[#4c6b9e] font-semibold"
+        className="text-[#4c6b9e] font-semibold text-3xl md:text-5xl mb-8"
       >
         Civil & Structural Engineering
       </motion.h2>
@@ -111,7 +111,7 @@ const Civil = () => {
               },
             }}
           >
-            <strong className="text-[#1e325c] font-semibold">
+            <strong className="text-[#1e325c] font-semibold ">
               Civil and structural engineering
             </strong>{" "}
             plays a crucial role in the safety and success of both onshore and
