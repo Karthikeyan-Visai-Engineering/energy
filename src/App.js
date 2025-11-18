@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Loader from "./components/Loader";
 import ImageSlider from "./components/ImageSlider";
 import ScrollToTop from "./components/ScrollToTop"; // ✅ Import ScrollToTop
 
@@ -40,11 +39,7 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <div className="font-['Poppins','Urbanist','sans-serif'] bg-[#f9fafb] text-[#1e325c]">
-      {loading ? (
-        <Loader />
-      ) : (
+  return  (
         <>
           <ScrollToTop /> {/* ✅ Add here */}
           <Header />
@@ -90,9 +85,7 @@ const App = () => {
           </main>
           <Footer />
         </>
-      )}
-    </div>
-  );
+      )
 };
 
 export default App;
