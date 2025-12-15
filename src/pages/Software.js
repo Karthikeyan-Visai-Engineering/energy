@@ -7,16 +7,24 @@ import fathom from "../assets/fathom.webp";
 import mathcad from "../assets/mathcad.webp";
 import tekla from "../assets/tekla.webp";
 import solidworks from "../assets/solidworks.webp";
-import aspen from "../assets/aspen.webp";
+import aspenHysys from "../assets/aspen.webp";
+import Caesar from "../assets/Caesar_Logo.png";
+import SDS2 from "../assets/SDS2.png";
+import Ideastatica from "../assets/Idea.png";
+import Cadworks from "../assets/CadWorks.png";
 
 const companies = [
   { name: "Autodesk", logo: autodesk },
   { name: "Tekla", logo: tekla },
+  { name:"SDS2", logo:SDS2},
+  { name:"Cadworks", logo:Cadworks},
+  { name:"Caesar", logo:Caesar},
+  { name:"Ideastatica", logo:Ideastatica},
   { name: "Ansys", logo: ansys },
   { name: "Fathom", logo: fathom },
   { name: "Mathcad", logo: mathcad },
   { name: "SolidWorks", logo: solidworks },
-  { name: "Aspen", logo: aspen },
+  { name: "Aspen Hysys", logo: aspenHysys },
 ];
 
 /* ── motion variants ─────────────────────────── */

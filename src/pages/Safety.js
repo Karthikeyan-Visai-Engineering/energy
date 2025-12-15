@@ -82,7 +82,7 @@ const StructuralPage = () => (
           viewport={{ once: true }}
           className="text-xl md:text-2xl text-[#4c6b9e] mb-12 max-w-xl"
         >
-          At <strong>Visai Engineering</strong>, our commitment to safety and
+          At <strong>Visai Energy</strong>, our commitment to safety and
           sustainability defines the way we build the future—responsibly,
           innovatively, and with care.
         </motion.p>
