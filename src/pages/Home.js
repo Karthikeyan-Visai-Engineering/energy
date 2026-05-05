@@ -29,7 +29,7 @@ const WebsiteDiagram = () => {
     <section className="relative bg-white text-[#1E3A8A] overflow-hidden py-24 font-poppins">
       {/* 🎉 Animated Celebration Text with Pop + Pulse */}
       {/* 🎉 Typing Effect Celebration Text */}
-<div className="flex justify-center mb-20">
+<div className="flex justify-center mb-20 ">
   <motion.h2
     className="text-3xl md:text-4xl font-extrabold text-[#1E3A8A]"
     animate={{ opacity: [0.4, 1, 0.4] }}
