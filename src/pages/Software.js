@@ -2,29 +2,25 @@ import React, { useRef, useEffect, useState, memo } from "react";
 import { motion } from "framer-motion";
 
 import autodesk from "../assets/Autodesk.webp";
-import ansys from "../assets/Ansys.webp";
 import fathom from "../assets/fathom.webp";
 import mathcad from "../assets/mathcad.webp";
-import tekla from "../assets/tekla.webp";
 import solidworks from "../assets/solidworks.webp";
-import aspenHysys from "../assets/aspen.webp";
-import Caesar from "../assets/Caesar_Logo.png";
 import SDS2 from "../assets/SDS2.png";
+import Aspen from "../assets/Aspen.png";
 import Ideastatica from "../assets/Idea.png";
-import Cadworks from "../assets/CadWorks.png";
+import Risa from "../assets/RISA.png";
+import Tekla from "../assets/tekla.webp";
 
 const companies = [
   { name: "Autodesk", logo: autodesk },
-  { name: "Tekla", logo: tekla },
+  { name: "Tekla", logo: Tekla },
   { name:"SDS2", logo:SDS2},
-  { name:"Cadworks", logo:Cadworks},
-  { name:"Caesar", logo:Caesar},
   { name:"Ideastatica", logo:Ideastatica},
-  { name: "Ansys", logo: ansys },
+  { name: "Aspen", logo: Aspen },
   { name: "Fathom", logo: fathom },
   { name: "Mathcad", logo: mathcad },
   { name: "SolidWorks", logo: solidworks },
-  { name: "Aspen Hysys", logo: aspenHysys },
+  { name: "Risa", logo: Risa },
 ];
 
 /* ── motion variants ─────────────────────────── */

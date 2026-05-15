@@ -10,6 +10,8 @@ import aiscLogo from "../assets/aisc.webp";
 import complyworksLogo from "../assets/complyworks.webp";
 import isn from "../assets/ISN.png";
 import cor from "../assets/COR.png"
+import cisc from "../assets/CISC.png"
+
 
 /* ——— helper ——— */
 const LazyImage = ({ src, alt, className }) => {
@@ -60,6 +62,7 @@ const logos = [
   { src: complyworksLogo, alt: "COMPLYWORKS" },
   { src: cor, alt: "COR" },
   { src: isn, alt: "ISN" },
+  { src: cisc, alt: "CISC" },
 
 ];
 
