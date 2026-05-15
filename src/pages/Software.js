@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState, memo } from "react";
 import { motion } from "framer-motion";
 
 import autodesk from "../assets/Autodesk.webp";
-import fathom from "../assets/fathom.webp";
+import fathom from "../assets/fathom.png";
 import mathcad from "../assets/mathcad.webp";
-import solidworks from "../assets/solidworks.webp";
+import solidworks from "../assets/solidworks.png";
 import SDS2 from "../assets/SDS2.png";
 import Aspen from "../assets/Aspen.png";
 import Ideastatica from "../assets/Idea.png";
