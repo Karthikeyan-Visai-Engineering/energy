@@ -27,8 +27,8 @@ const Footer = () => {
               </h3>
               <p>
                 Visai Energy Inc <br />
-                500 - 4th Avenue SW, Suite 2500 <br />
-                Calgary, T2P 2V6, Alberta <br />
+                727 – 7th Ave SW, Suite 500 <br />
+                Calgary, AB T2P 0Z5 <br />
                 Ph: 403 604 9777 <br />
                 Email: info@visaienergy.com <br />
               </p>
