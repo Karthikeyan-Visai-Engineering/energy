@@ -22,8 +22,6 @@ const centerX = 270;
 const centerY = 270;
 
 const text = "🎉 Celebrating 9 Years of Excellence 🎉";
-
-
 const WebsiteDiagram = () => {
   return (
     <section className="relative bg-white text-[#1E3A8A] overflow-hidden py-24 font-poppins">

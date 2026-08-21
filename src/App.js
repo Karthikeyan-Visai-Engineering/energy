@@ -32,7 +32,7 @@ import Procurement from "./pages/Procurement";
 import Document from "./pages/Document";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000);
