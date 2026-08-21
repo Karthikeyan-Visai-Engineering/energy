@@ -103,8 +103,6 @@ const Footer = () => {
             <FaFacebook />
           </a>
           <a
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-yellow">
             For Structural and Detailing connect with:
           </a>
