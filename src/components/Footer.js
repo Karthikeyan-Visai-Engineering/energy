@@ -102,6 +102,20 @@ const Footer = () => {
           >
             <FaFacebook />
           </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow">
+            For Structural and Detailing connect with:
+          </a>
+          <a
+            href="https://www.visaiengineering.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Engineering"
+            className="hover:text-red-400 text-red-400 transition-colors"
+          > www.visaiengineering.com
+          </a>
         </div>
       </div>
 
